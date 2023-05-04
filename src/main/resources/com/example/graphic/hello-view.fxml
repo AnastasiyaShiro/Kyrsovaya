@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="595.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.graphic.HelloController">
+   <children>
+      <TableView fx:id="tbl" editable="true" layoutX="93.0" layoutY="7.0" prefHeight="235.0" prefWidth="432.0" />
+      <Button layoutX="503.0" layoutY="297.0" mnemonicParsing="false" onAction="#onSef" text="Добавить" />
+      <Button layoutX="458.0" layoutY="383.0" mnemonicParsing="false" onAction="#onDel" prefHeight="25.0" prefWidth="69.0" text="Удалить" />
+      <Label layoutX="23.0" layoutY="272.0" text="Введите дисциплину:" />
+      <TextField fx:id="fieldDisc" layoutX="23.0" layoutY="297.0" prefHeight="25.0" prefWidth="139.0" />
+      <Label layoutX="198.0" layoutY="272.0" text="Введите компетенцию:" />
+      <TextField fx:id="fieldCom" layoutX="198.0" layoutY="297.0" prefHeight="25.0" prefWidth="69.0" />
+      <Label layoutX="357.0" layoutY="272.0" text="Введите индикатор:" />
+      <TextField fx:id="fieldInd" layoutX="357.0" layoutY="297.0" prefHeight="25.0" prefWidth="109.0" />
+      <Label layoutX="14.0" layoutY="242.0" prefHeight="25.0" prefWidth="568.0" text="  Чтобы добавить новую запись, впишите указанные ниже названия и нажмите на кнопку ''Добавить'':" wrapText="true">
+         <font>
+            <Font name="Leelawadee UI" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="18.0" layoutY="334.0" prefHeight="43.0" prefWidth="568.0" text="  Чтобы изменить значение, щелкните дважды по интересующей Вас ячейке, напишите новое значение и нажмите клавишу &lt;Enter&gt;." textAlignment="JUSTIFY" wrapText="true">
+         <font>
+            <Font name="Leelawadee UI" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="377.0" prefHeight="36.0" prefWidth="432.0" text="  Чтобы удалить запись, выберите ее из таблицы, а затем кликните по кнопке" wrapText="true">
+         <font>
+            <Font name="Leelawadee UI" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="279.0" layoutY="415.0" mnemonicParsing="false" onAction="#onPieChart" text="Перейти к аналитике" />
+      <Label layoutX="23.0" layoutY="419.0" text="  Чтобы увидеть график, нажмите на кнопку" />
+   </children>
+</AnchorPane>
