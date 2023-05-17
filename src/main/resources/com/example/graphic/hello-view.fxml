@@ -30,7 +30,7 @@
             <Font name="Leelawadee UI" size="12.0" />
          </font>
       </Label>
-      <Button layoutX="279.0" layoutY="415.0" mnemonicParsing="false" onAction="#onPieChart" text="Перейти к аналитике" />
+      <Button layoutX="279.0" layoutY="415.0" mnemonicParsing="false" onAction="#onGraphics" text="Перейти к аналитике" />
       <Label layoutX="23.0" layoutY="419.0" text="  Чтобы увидеть график, нажмите на кнопку" />
    </children>
 </AnchorPane>
