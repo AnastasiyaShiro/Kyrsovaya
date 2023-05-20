@@ -1,4 +1,4 @@
-package com.example.graphic;
+package com.example.competenciesForStudents;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -21,11 +21,11 @@ import java.io.*;
 import java.util.ArrayList;
 
 /**
- Класс для графиков.
- @author Щербак Анастасия Романовна
- @version 1.0
+ * Класс для графиков: их создание и печать.
+ * @author Щербак Анастасия Романовна
+ * @version 0.4
  */
-public class Graphics
+public class Charts
 {
     private Scene scene;
     private Stage stage;

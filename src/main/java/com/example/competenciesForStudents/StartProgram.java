@@ -1,4 +1,4 @@
-package com.example.graphic;
+package com.example.competenciesForStudents;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -6,12 +6,18 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
 
-public class HelloApplication extends Application
+/**
+ * Класс для запуска программы.
+ * @author Щербак Анастасия Романовна
+ * @version 0.4
+ */
+
+public class StartProgram extends Application
 {
         @Override
         public void start(Stage stage) throws IOException
         {
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+            FXMLLoader fxmlLoader = new FXMLLoader(StartProgram.class.getResource("hello-view.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 600, 460);
             stage.setTitle("База данных");
             stage.setScene(scene);

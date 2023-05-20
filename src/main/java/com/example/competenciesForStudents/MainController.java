@@ -1,4 +1,4 @@
-package com.example.graphic;
+package com.example.competenciesForStudents;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -16,8 +16,12 @@ import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
-
-public class HelloController implements Initializable
+/**
+ * Класс для контроллера формы.
+ * @author Щербак Анастасия Романовна
+ * @version 0.4
+*/
+public class MainController implements Initializable
 {
     public TableView tbl;
     public TextField fieldDisc;
@@ -26,28 +30,28 @@ public class HelloController implements Initializable
     ArrayList<String> columnValues;
     ArrayList<Integer> count;
     ArrayList<Integer> counterInd;
-    InterDB interDB;
+    InterfaceDB interfaceDB;
     private ObservableList<StrDB> fxlist;// cпециальный cпиcок для работы GUI
     TableColumn col0;
     TableColumn col1;
     TableColumn col2;
     TableColumn col3;
     StrDB strDBAdd;
-    Graphics gr;
+    Charts gr;
     XYChart.Series<String, Number> series;
     private String[] competencies=new String[] {"УК1","УК2","УК3","УК4","УК5","УК6","ОПК1","ОПК2","ОПК3","ПК1","ПК2","ПК3"};
 
 
     private void updateTable()
     {
-        fxlist= FXCollections.observableList(interDB.getAllStrDB());
+        fxlist= FXCollections.observableList(interfaceDB.getAllStrDB());
         tbl.setItems(fxlist);
     }
 
     private void updateSorts()
     {
         StrDB strDB=fxlist.get(tbl.getSelectionModel().getSelectedIndex());
-        interDB.updateStrDB(strDB);
+        interfaceDB.updateStrDB(strDB);
     }
     private void createtable()
     {
@@ -100,15 +104,15 @@ public class HelloController implements Initializable
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        interDB=new InterDBImpl();//направили в бд
-        fxlist= FXCollections.observableList(interDB.getAllStrDB());
+        interfaceDB =new InterfaceDBImpliment();//направили в бд
+        fxlist= FXCollections.observableList(interfaceDB.getAllStrDB());
         createtable();
     }
 
     public void onSef(ActionEvent actionEvent)
     {
         strDBAdd=new StrDB(1,fieldDisc.getText(),fieldCom.getText(),fieldInd.getText());
-        interDB.addStrDB(strDBAdd);
+        interfaceDB.addStrDB(strDBAdd);
         updateTable();
     }
 
@@ -116,20 +120,20 @@ public class HelloController implements Initializable
     {
         int index=tbl.getSelectionModel().getSelectedIndex();
         StrDB StrDB=fxlist.get(index);
-        interDB.deleteStrDB(StrDB.getId());
+        interfaceDB.deleteStrDB(StrDB.getId());
         updateTable();
     }
 
     public void onGraphics(ActionEvent actionEvent) throws SQLException {
-        columnValues=interDB.arrDisc();
-        count=interDB.arrCount();
-        gr=new Graphics();
+        columnValues= interfaceDB.arrDisc();
+        count= interfaceDB.arrCount();
+        gr=new Charts();
         gr.printPieChart(columnValues,count);
 
         ObservableList<XYChart.Series<String, Number>> seriesList = FXCollections.observableArrayList();
         for (int i=0;i<columnValues.size();i++)
         {
-            counterInd=interDB.countIndicator(columnValues.get(i),competencies);
+            counterInd= interfaceDB.countIndicator(columnValues.get(i),competencies);
             series=gr.onAreaChart(columnValues.get(i),counterInd,competencies);
             seriesList.add(series);
         }

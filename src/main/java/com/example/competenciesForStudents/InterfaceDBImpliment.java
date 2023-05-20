@@ -1,17 +1,23 @@
-package com.example.graphic;
+package com.example.competenciesForStudents;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class InterDBImpl implements InterDB
+/**
+ * Класс для реализации интерфейса InterfaceDB для работы с базой данных.
+ * @author Щербак Анастасия Романовна
+ * @version 0.4
+ */
+
+public class InterfaceDBImpliment implements InterfaceDB
 {
     private Connection conn;
     private PreparedStatement ps;
     private ResultSet rs;
     private Statement stmt;
 
-    public InterDBImpl()
+    public InterfaceDBImpliment()
     {
         try
         {

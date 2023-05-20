@@ -1,7 +1,13 @@
-package com.example.graphic;
+package com.example.competenciesForStudents;
 
 import javafx.beans.property.SimpleIntegerProperty;
 import javafx.beans.property.SimpleStringProperty;
+
+/**
+ * Класс для создания одной строки в базе данных.
+ * @author Щербак Анастасия Романовна
+ * @version 0.4
+ */
 
 public class StrDB
 {
