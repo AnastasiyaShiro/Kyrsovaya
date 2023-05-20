@@ -6,11 +6,14 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.*;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
+
 import java.net.URL;
-import java.sql.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -121,7 +124,7 @@ public class HelloController implements Initializable
         columnValues=interDB.arrDisc();
         count=interDB.arrCount();
         gr=new Graphics();
-        gr.onPieChart(columnValues,count);
+        gr.printPieChart(columnValues,count);
 
         ObservableList<XYChart.Series<String, Number>> seriesList = FXCollections.observableArrayList();
         for (int i=0;i<columnValues.size();i++)
