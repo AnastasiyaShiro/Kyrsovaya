@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Класс для запуска программы.
  * @author Щербак Анастасия Романовна
- * @version 0.4
+ * @version 0.5
  */
 
 public class StartProgram extends Application

@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Класс для интерфейса базы данных.
  * @author Щербак Анастасия Романовна
- * @version 0.4
+ * @version 0.5
  */
 
 public interface InterfaceDB

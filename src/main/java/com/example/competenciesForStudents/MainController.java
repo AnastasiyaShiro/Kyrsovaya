@@ -19,28 +19,25 @@ import java.util.ResourceBundle;
 /**
  * Класс для контроллера формы.
  * @author Щербак Анастасия Романовна
- * @version 0.4
+ * @version 0.5
 */
 public class MainController implements Initializable
 {
-    public TableView tbl;
-    public TextField fieldDisc;
-    public TextField fieldCom;
-    public TextField fieldInd;
-    ArrayList<String> columnValues;
-    ArrayList<Integer> count;
-    ArrayList<Integer> counterInd;
-    InterfaceDB interfaceDB;
+    private TableView tbl;
+    private TextField fieldDisc;
+    private TextField fieldCom;
+    private TextField fieldInd;
+    private ArrayList<String> columnValues;
+    private ArrayList<Integer> count;
+    private ArrayList<Integer> counterInd;
+    private InterfaceDB interfaceDB;
     private ObservableList<StrDB> fxlist;// cпециальный cпиcок для работы GUI
-    TableColumn col0;
-    TableColumn col1;
-    TableColumn col2;
-    TableColumn col3;
-    StrDB strDBAdd;
-    Charts gr;
-    XYChart.Series<String, Number> series;
+    private TableColumn col0;
+    private TableColumn col1;
+    private TableColumn col2;
+    private TableColumn col3;
+    private StrDB strDBAdd;
     private String[] competencies=new String[] {"УК1","УК2","УК3","УК4","УК5","УК6","ОПК1","ОПК2","ОПК3","ПК1","ПК2","ПК3"};
-
 
     private void updateTable()
     {
@@ -127,10 +124,10 @@ public class MainController implements Initializable
     public void onGraphics(ActionEvent actionEvent) throws SQLException {
         columnValues= interfaceDB.arrDisc();
         count= interfaceDB.arrCount();
-        gr=new Charts();
+        Charts gr=new Charts();
         gr.printPieChart(columnValues,count);
-
         ObservableList<XYChart.Series<String, Number>> seriesList = FXCollections.observableArrayList();
+        XYChart.Series<String, Number> series;
         for (int i=0;i<columnValues.size();i++)
         {
             counterInd= interfaceDB.countIndicator(columnValues.get(i),competencies);
