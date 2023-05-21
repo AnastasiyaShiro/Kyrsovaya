@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Класс для реализации интерфейса Printable (печати) для печати диаграмм.
  * @author Щербак Анастасия Романовна
- * @version 0.5
+ * @version 0.6
  */
 public class PrintCharts implements Printable
 {
@@ -37,10 +37,13 @@ public class PrintCharts implements Printable
     {
         PrinterJob job = PrinterJob.getPrinterJob();
         PageFormat pf = job.defaultPage();
+        Paper paper = new Paper();
+        paper.setImageableArea(0.0, 0.0, 500, 800);
+        pf.setPaper(paper);
         BufferedImage img = null;
         try
         {
-            img = ImageIO.read(new File(name));//ля чтения изображения из файла по заданному имени файла и создания
+            img = ImageIO.read(new File(name));//для чтения изображения из файла по заданному имени файла и создания
             //объекта Image, который можно использовать для отображения изображения в графическом контексте.
         }
         catch (IOException e)

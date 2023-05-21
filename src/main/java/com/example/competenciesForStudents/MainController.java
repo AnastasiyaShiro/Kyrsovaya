@@ -19,14 +19,14 @@ import java.util.ResourceBundle;
 /**
  * Класс для контроллера формы.
  * @author Щербак Анастасия Романовна
- * @version 0.5
+ * @version 0.6
 */
 public class MainController implements Initializable
 {
-    private TableView tbl;
-    private TextField fieldDisc;
-    private TextField fieldCom;
-    private TextField fieldInd;
+    public TableView tbl;
+    public TextField fieldDisc;
+    public TextField fieldCom;
+    public TextField fieldInd;
     private ArrayList<String> columnValues;
     private ArrayList<Integer> count;
     private ArrayList<Integer> counterInd;

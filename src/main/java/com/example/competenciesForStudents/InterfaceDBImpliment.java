@@ -7,7 +7,7 @@ import java.util.List;
 /**
  * Класс для реализации интерфейса InterfaceDB для работы с базой данных.
  * @author Щербак Анастасия Романовна
- * @version 0.5
+ * @version 0.6
  */
 
 public class InterfaceDBImpliment implements InterfaceDB

@@ -20,7 +20,7 @@ import java.util.ArrayList;
 /**
  * Класс для диаграмм: их создание и печать.
  * @author Щербак Анастасия Романовна
- * @version 0.5
+ * @version 0.6
  */
 public class Charts
 {

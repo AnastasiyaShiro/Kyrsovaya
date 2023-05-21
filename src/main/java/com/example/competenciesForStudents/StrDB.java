@@ -6,7 +6,7 @@ import javafx.beans.property.SimpleStringProperty;
 /**
  * Класс для создания одной строки в базе данных.
  * @author Щербак Анастасия Романовна
- * @version 0.5
+ * @version 0.6
  */
 
 public class StrDB
