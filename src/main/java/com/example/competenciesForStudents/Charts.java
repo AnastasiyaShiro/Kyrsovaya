@@ -52,7 +52,7 @@ public class Charts
             e.printStackTrace();
         }
     }
-    public void printPieChart(ArrayList<String> columnValues, ArrayList<Integer> count)
+    public void createPieChart(ArrayList<String> columnValues, ArrayList<Integer> count)
     {
         ObservableList<PieChart.Data> pieChartData = FXCollections.observableArrayList();
         for (int i = 0; i < columnValues.size(); i++)
@@ -76,7 +76,7 @@ public class Charts
         return series;
     }
 
-    public void printAreaChart(ObservableList<XYChart.Series<String, Number>> seriesList)
+    public void createAreaChart(ObservableList<XYChart.Series<String, Number>> seriesList)
     {
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Компетенции");

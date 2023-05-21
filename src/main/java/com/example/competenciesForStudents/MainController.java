@@ -125,7 +125,7 @@ public class MainController implements Initializable
         columnValues= interfaceDB.arrDisc();
         count= interfaceDB.arrCount();
         Charts gr=new Charts();
-        gr.printPieChart(columnValues,count);
+        gr.createPieChart(columnValues,count);
         ObservableList<XYChart.Series<String, Number>> seriesList = FXCollections.observableArrayList();
         XYChart.Series<String, Number> series;
         for (int i=0;i<columnValues.size();i++)
@@ -134,7 +134,7 @@ public class MainController implements Initializable
             series=gr.onAreaChart(columnValues.get(i),counterInd,competencies);
             seriesList.add(series);
         }
-        gr.printAreaChart(seriesList);
+        gr.createAreaChart(seriesList);
     }
 }
 
