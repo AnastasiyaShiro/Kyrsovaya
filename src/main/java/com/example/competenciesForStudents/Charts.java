@@ -4,7 +4,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Scene;
-import javafx.scene.SnapshotParameters;
 import javafx.scene.chart.*;
 import javafx.scene.control.Button;
 import javafx.scene.image.WritableImage;
@@ -40,11 +39,7 @@ public class Charts
         pane.getChildren().add(button);
         stage.show();
 
-        SnapshotParameters snapshotParameters = new SnapshotParameters(); // Создаем параметры снимка
-        snapshotParameters.setDepthBuffer(true);//Эта строчка кода указывает на то, что параметры снимка (snapshot)
-// объекта будут содержать буфер глубины (depth buffer). Глубинный буфер используется для определения того, какие пиксели
-// находятся ближе к камере, а какие дальше, что позволяет правильно отображать 3D-модели на 2D-экране.
-        WritableImage image = chart.snapshot(snapshotParameters, null); // Создаем снимок диаграммы
+        WritableImage image = chart.snapshot(null, null); // Создаем снимок диаграммы
         File file = new File(fname);// Сохраняем снимок в файл
         try
         {
