@@ -66,8 +66,7 @@ public class Charts
 
     public XYChart.Series<String, Number> onAreaChart(String columnValues, ArrayList<Integer> counterInd, String[] competencies)
     {
-        XYChart.Series<String, Number> series;
-        series = new XYChart.Series<>();
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName(columnValues);
         for (int j = 0; j < competencies.length; j++)
         {
