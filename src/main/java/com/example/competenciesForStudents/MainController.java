@@ -116,8 +116,8 @@ public class MainController implements Initializable
     public void onDel(ActionEvent actionEvent)
     {
         int index=tbl.getSelectionModel().getSelectedIndex();
-        StrDB StrDB=fxlist.get(index);
-        interfaceDB.deleteStrDB(StrDB.getId());
+        StrDB strDB=fxlist.get(index);
+        interfaceDB.deleteStrDB(strDB.getId());
         updateTable();
     }
 
