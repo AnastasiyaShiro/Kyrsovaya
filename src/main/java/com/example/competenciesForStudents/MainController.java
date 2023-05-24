@@ -6,6 +6,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -116,10 +117,22 @@ public class MainController implements Initializable
     public void onDel(ActionEvent actionEvent)
     {
         int index=tbl.getSelectionModel().getSelectedIndex();
-        StrDB strDB=fxlist.get(index);
-        interfaceDB.deleteStrDB(strDB.getId());
-        updateTable();
+        if (index != -1)
+        {
+            StrDB strDB=fxlist.get(index);
+            interfaceDB.deleteStrDB(strDB.getId());
+            updateTable();
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Неверное действие.");
+            alert.setHeaderText("Пожалуйста, выберите строку, которую нужно удалить");
+            alert.setHeight(40);
+            alert.show();
+        }
     }
+
 
     public void onGraphics(ActionEvent actionEvent) throws SQLException {
         columnValues= interfaceDB.arrDisc();
