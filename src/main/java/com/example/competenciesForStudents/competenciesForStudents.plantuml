@@ -2,7 +2,8 @@
 
 title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       class com.example.competenciesForStudents.Charts {
           + createAreaChart()
           + createPieChart()
@@ -11,9 +12,11 @@ title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
           + showChart()
       }
     }
+  }
   
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       interface com.example.competenciesForStudents.InterfaceDB {
           {abstract} + addStrDB()
           {abstract} + arrCount()
@@ -24,10 +27,11 @@ title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
           {abstract} + updateStrDB()
       }
     }
-
+  }
   
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       class com.example.competenciesForStudents.InterfaceDBImpliment {
           - conn : Connection
           - ps : PreparedStatement
@@ -43,10 +47,11 @@ title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
           + updateStrDB()
       }
     }
-
+  }
   
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       class com.example.competenciesForStudents.MainController {
           + fieldCom : TextField
           + fieldDisc : TextField
@@ -70,9 +75,11 @@ title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
           - updateTable()
       }
     }
+  }
   
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       class com.example.competenciesForStudents.PrintCharts {
           - img : BufferedImage
           + PrintCharts()
@@ -80,17 +87,21 @@ title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
           + printing()
       }
     }
+  }
   
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       class com.example.competenciesForStudents.StartProgram {
           {static} + main()
           + start()
       }
     }
+  }
   
 
-  namespace com.example.competenciesForStudents {
+  namespace  {
+    namespace om.example.competenciesForStudents {
       class com.example.competenciesForStudents.StrDB {
           - competence : SimpleStringProperty
           - discipline : SimpleStringProperty
@@ -106,6 +117,7 @@ title __COMPETENCIESFORSTUDENTS's Class Diagram__\n
           + setIndicator()
       }
     }
+  }
   
 
   com.example.competenciesForStudents.InterfaceDBImpliment .up.|> com.example.competenciesForStudents.InterfaceDB

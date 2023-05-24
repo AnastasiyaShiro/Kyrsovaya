@@ -10,7 +10,7 @@ import java.io.IOException;
 /**
  * Класс для реализации интерфейса Printable (печати) для печати диаграмм.
  * @author Щербак Анастасия Романовна
- * @version 0.6
+ * @version 0.7
  */
 public class PrintCharts implements Printable
 {

@@ -20,7 +20,7 @@ import java.util.ResourceBundle;
 /**
  * Класс для контроллера формы.
  * @author Щербак Анастасия Романовна
- * @version 0.6
+ * @version 0.7
 */
 public class MainController implements Initializable
 {
